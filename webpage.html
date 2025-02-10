@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Booking</title>
+    <style>
+        body { 
+            background-color: #000000; /* Black */
+            color: orange; /* Text color */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            background-color: orange;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: darkorange;
+        }
+        .vehicles-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .vehicles-item {
+            border: 1px solid orange;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #222;
+            width: 200px;
+        }
+        .vehicles-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Car Rental Booking Form</h2>
+    <p>Click the button below to fill out the booking form:</p>
+    
+    <a href="https://tally.so/r/mJeQ1R" target="_blank">
+        <button>Fill Booking Form</button>
+    </a>
+<h2>PUANG Rental Car</h2>
+
+<h2>Our Services</h2>
+<p> - We provide affordable car rentals, including sedans, SUVs, MPVs, and premium models.</p>
+<p> - Enjoy free delivery within Kota Kinabalu and the airport.</p>
+<p> - Clean and well-maintained vehicles.</p>
+<p> - 24 hour service crew operates for customers to ensure everything runs smoothly without any problems including emergencies, accidents or changing vehicles. </p>
+<p> - Flexible rate for daily, weekly, or monthly</p>
+<p> (Call or whatsapp now at 011-64626151 for any enquiries / available car)</p>
+
+<!-- CSS (Ensure this is inside your <style> tag or external stylesheet) -->
+<style>
+    .box {
+        text-align: center; /* Centers the image */
+        margin-top: 10px;
+    }
+    .small-img {
+        width: 300px; /* Adjusted to make it small */
+        height: auto; /* Keeps aspect ratio */
+        max-width: 100%; /* Ensures responsiveness */
+        border-radius: 5px; /* Optional: rounded corners */
+    }
+</style>
+
+
+    <a href="#vehicles">
+        <button>View Vehicles</button>
+    </a>
+
+    <h2 id="vehicles">Available Vehicles</h2>
+    <div class="vehicles-list" id="vehicles-container"></div>
+
+    <script>
+        function generateVehiclesList() {
+            let vehicles = [
+                { name: "Axia RM120 daily", img: "Axia-img.png" },
+                { name: "Myvi RM150 daily", img: "Myvi-img.png" },
+                { name: "BEZZA RM150 daily", img: "BEZZA-img.png" },
+                { name: "SAGA RM140 daily", img: "SAGA-img.png" },
+                { name: "PERSONA RM160 daily", img: "PERSONA-img.png" },
+                { name: "Toyota VIOS RM230 daily", img: "VIOS-img.png" },
+                { name: "Honda CITY RM230 daily", img: "CITY-img.png" },
+                { name: "Proton X50 RM300-350", img: "X50-img.png" },
+                { name: "ARUZ RM230 daily", img: "ARUZ-img.png" },
+                { name: "ALZA RM230 daily", img: "ALZA-img.png" },
+                { name: "INNOVA RM300 daily", img: "INNOVA-img.png" },
+                { name: "Toyota FORTUNER RM600 daily", img: "FORTUNER-img.png" },
+                { name: "Toyota Hiace RM350 daily", img: "Hiace-img.png" },
+                { name: "Nissan NV350 RM350 daily", img: "NV350-img.png" }
+            ];
+
+            let container = document.getElementById("vehicles-container");
+            container.innerHTML = vehicles.map(vehicle => `
+                <div class="vehicles-item">
+                    <img src="${vehicle.img}" alt="${vehicle.name}">
+                    <p>${vehicle.name}</p>
+                </div>
+            `).join('');
+        }
+
+        window.onload = generateVehiclesList;
+    </script>
+
+    <footer>
+        <p>&copy; 2024 PUANG Rental Car</p>
+    </footer>
+
+</body>
+</html>
